@@ -1,0 +1,14 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - echo "Install phase - Placeholder (no installation)"
+  build:
+    commands:
+      - echo "Build phase - Placeholder (no build)"
+  post_build:
+    commands:
+      - echo "Post build phase - Placeholder (no cleanup)"
+artifacts:
+  files:
+    - "**/*"
