@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      terraform: latest
+
+  build:
+    commands:
+      - echo "Terraform path: terraform/$TF_EXEC_PATH"
+      - cd terraform/$TF_EXEC_PATH
+      - terraform init
+      - terraform plan
