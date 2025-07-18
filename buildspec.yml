@@ -7,7 +7,6 @@ phases:
 
   build:
     commands:
-      - echo "Terraform path: terraform/$TF_EXEC_PATH"
       - cd terraform/$TF_EXEC_PATH
       - terraform init
       - terraform plan
