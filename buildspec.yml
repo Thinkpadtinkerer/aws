@@ -3,9 +3,18 @@ version: 0.2
 phases:
   install:
     commands:
+      # Download Terraform
+      - echo "Downloading Terraform..."
       - curl -sLo terraform.zip https://releases.hashicorp.com/terraform/1.8.4/terraform_1.8.4_linux_amd64.zip
+      
+      # Check if the file was downloaded
+      - if [ -f terraform.zip ]; then echo "Terraform zip downloaded successfully"; else echo "Terraform zip download failed"; exit 1; fi
+      
+      # Unzip the Terraform file
       - unzip terraform.zip
       - mv terraform /usr/local/bin/
+      
+      # Verify Terraform installation
       - terraform version
 
   build:
