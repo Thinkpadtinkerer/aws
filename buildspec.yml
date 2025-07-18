@@ -6,5 +6,6 @@ phases:
       - terraform version
       - echo $TF_EXEC_PATH
       - cd terraform/$TF_EXEC_PATH
+      - ls -alh
       - terraform init
       - terraform plan
